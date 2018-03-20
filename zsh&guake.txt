@@ -2,6 +2,11 @@ Guake appearance:
 Font - DejaVu Sans Mono for Powerline Book 10
 Built-in schemes - Neutron
 
+Install zsh-syntax-highlighting:
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+Run zsh-syntax-highlighting:
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 Copy this in .zshrc:
 
 ####### Stylizing ########
@@ -12,7 +17,6 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="awesome-fontconfig"
 
-source ~/.fonts/*.sh
 source $ZSH/oh-my-zsh.sh
 
 POWERLEVEL9K_FOLDER_ICON="" 
@@ -71,6 +75,7 @@ plugins=(k tig gitfast colored-man colorize
 # /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
 
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_STYLES[cursor]='bold'
 
