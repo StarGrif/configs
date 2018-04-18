@@ -30,7 +30,46 @@ Built-in schemes - Neutron.
 
    `source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
 
-5. Copy this in .zshrc:
+5. Install Powerline fonts:
+
+   ```bash
+   git clone https://github.com/powerline/fonts.git
+   cd fonts
+   ./install.sh
+   cd ..
+   rm -rf fonts
+   ```
+
+   or
+
+   ``` bash
+   sudo apt-get install fonts-powerline
+   ```
+
+   Fontconfig: 
+
+   ``` bash
+   cp <pathToFontsRepo>/fontconfig/50-enable-terminess-powerline.conf ~/.config/fontconfig/conf.d
+   fc-cache -vf
+   ```
+
+6. Install Awesome terminal fonts:
+
+   ``` bash
+   git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
+   cd awesome-terminal-fonts
+   ./install.sh
+   ```
+
+   Customize the configuration file `./config/10-symbols.conf` replacing `PragmataPro` with the name of the font you want to use in the terminal.
+
+   ``` bash
+   cp ./config/10-symbols.conf ~/.config/fontconfig/conf.d
+   ```
+
+   Restart system!!
+
+7. Copy this in .zshrc:
 
 ```bash
 export DEFAULT_USER="stargrif"
