@@ -1,6 +1,7 @@
 # Guake appearance:
-Font - DejaVu Sans Mono for Powerline Book 10
-Built-in schemes - Neutron
+Font - DejaVu Sans Mono for Powerline Book 10;
+
+Built-in schemes - Neutron.
 
 # Install beautifull terminall:
 1. Install zsh:
@@ -10,8 +11,11 @@ Built-in schemes - Neutron
 2. Install oh-my-zsh:
 
    via curl
+
    `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
    via wget
+
    `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 
 3. Install Powerlevel9k:
@@ -21,7 +25,9 @@ Built-in schemes - Neutron
 4. Install zsh-syntax-highlighting:
 
    `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git`
+
    *Optional:* Run zsh-syntax-highlighting:
+
    `source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
 
 5. Copy this in .zshrc:
@@ -85,17 +91,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)
 POWERLEVEL9K_SHOW_CHANGESET=true
 HYPHEN_INSENSITIVE="true"
 
-plugins=(k 
-		tig 
-		gitfast 
-		colored-man 
-		colorize
-		command-not-found
-		cp
-        dirhistory
-        autojump
-        sudo 
-		zsh-syntax-highlighting)
+plugins=(k tig gitfast colored-man colorize command-not-found cp 
+         dirhistory autojump sudo zsh-syntax-highlighting)
 
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
