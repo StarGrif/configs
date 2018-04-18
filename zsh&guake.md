@@ -1,26 +1,35 @@
-Guake appearance:
+# Guake appearance:
 Font - DejaVu Sans Mono for Powerline Book 10
 Built-in schemes - Neutron
 
-Install zsh:
-via curl
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-via wget
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+# Install beautifull terminall:
+1. Install zsh:
 
-Install Powerlevel9k:
- git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+   `sudo apt-fast install zsh`
 
-Install zsh-syntax-highlighting:
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-Run zsh-syntax-highlighting:
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+2. Install oh-my-zsh:
 
-Copy this in .zshrc:
+   via curl
+   `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+   via wget
+   `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 
-####### Stylizing ########
+3. Install Powerlevel9k:
+
+    `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+
+4. Install zsh-syntax-highlighting:
+
+   `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git`
+   *Optional:* Run zsh-syntax-highlighting:
+   `source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
+
+5. Copy this in .zshrc:
+
+```bash
 export DEFAULT_USER="stargrif"
 export TERM="xterm-256color"
+
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -76,12 +85,17 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)
 POWERLEVEL9K_SHOW_CHANGESET=true
 HYPHEN_INSENSITIVE="true"
 
-# /!\ do not use with zsh-autosuggestions
-
-plugins=(k tig gitfast colored-man colorize 
-		command-not-found cp dirhistory autojump sudo 
+plugins=(k 
+		tig 
+		gitfast 
+		colored-man 
+		colorize
+		command-not-found
+		cp
+        dirhistory
+        autojump
+        sudo 
 		zsh-syntax-highlighting)
-# /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
 
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -95,5 +109,6 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
+```
 
-####### End stylizing #######
+
